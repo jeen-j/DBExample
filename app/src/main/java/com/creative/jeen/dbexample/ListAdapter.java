@@ -36,10 +36,10 @@ public class ListAdapter extends BaseAdapter {
         TextView tvName = (TextView) convertView.findViewById(R.id.tv_name);
         TextView tvRoomNum = (TextView) convertView.findViewById(R.id.tv_room_num);
         TextView tvTel = (TextView) convertView.findViewById(R.id.tv_tel);
-
+        
         tvName.setText(mDataList.get(position).getName());
-        tvName.setText(mDataList.get(position).getRoomNum());
-        tvName.setText(mDataList.get(position).getTel());
+        tvRoomNum.setText(Integer.toString(mDataList.get(position).getRoomNum()));
+        tvTel.setText(mDataList.get(position).getTel());
 
         return convertView;
 
