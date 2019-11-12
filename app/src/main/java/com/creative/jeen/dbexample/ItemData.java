@@ -9,11 +9,17 @@ public class ItemData {
     private String mName="";
     private int mRoomNum;
     private String mTel="";
+    private int mId;
 
-    public ItemData (String name, int roomNum, String tel){
+    public ItemData (int id, String name, int roomNum, String tel){
+        mId = id;
         mName = name;
         mRoomNum = roomNum;
         mTel = tel;
+    }
+
+    public int getId() {
+        return mId;
     }
 
     public String getName() {

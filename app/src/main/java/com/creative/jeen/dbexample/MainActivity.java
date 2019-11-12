@@ -8,9 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements Button.OnClickListener{
+
 
     EditText mEditText_Name;
     EditText mEditText_RoomNum;
@@ -25,25 +27,19 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDataList = new ArrayList<ItemData>();
-
-        //db
 
         ListView listView = (ListView) findViewById(R.id.listview);
         mAdapter = new ListAdapter(this, mDataList);
         listView.setAdapter(mAdapter);
 
         Button btnInsert = (Button) findViewById( R.id.btn_insert);
-        Button btnModify = (Button) findViewById( R.id.btn_modify);
-        Button btnDelete = (Button) findViewById( R.id.btn_delete);
 
         btnInsert.setOnClickListener(this);
-        btnModify.setOnClickListener(this);
-        btnDelete.setOnClickListener(this);
 
         mEditText_Name = (EditText) findViewById( R.id.et_name );
         mEditText_RoomNum = (EditText) findViewById( R.id.et_roomnum );
         mEditText_Tel = (EditText) findViewById( R.id.et_tel );
+
 
     }
 
@@ -52,11 +48,6 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
 
         switch (view.getId()) {
             case R.id.btn_insert:
-
-                break;
-            case R.id.btn_modify:
-                break;
-            case R.id.btn_delete:
                 break;
         }
     }
