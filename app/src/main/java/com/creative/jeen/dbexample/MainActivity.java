@@ -2,23 +2,17 @@ package com.creative.jeen.dbexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.creative.db.dbexample.DBContract;
-import com.creative.db.dbexample.DBHelper;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements Button.OnClickListener{
 
-    SQLiteDatabase mDb;
     EditText mEditText_Name;
     EditText mEditText_RoomNum;
     EditText mEditText_Tel;
